@@ -1,0 +1,7 @@
+- [x] Degager tous les <center></center> utilisant seulement des justify-content: center;
+- [] Refaire tous les footer en s'inspirant du contact.css
+- [] Raccourcir du code en regroupant des class dans le css
+- [] Retravailler sur les couleurs
+- [] Faire des images plutot que des - pour les titres
+- [] Mettre texte au milieu des li dans la navbar et remonter les li
+- [] Regler la homepage en responsive

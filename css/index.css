@@ -1,0 +1,613 @@
+/* Définition des polices personnalisées */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap');
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: 'Plus Jakarta Sans', serif;
+}
+
+/* Menu de Navigation */
+
+nav
+{
+    width: 100%;
+    height: 80px;
+    background-color: #c40233;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 3);
+    z-index: 2;
+}
+
+.menu_right > ul
+{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    margin-top: 0;
+    margin-left: 15%;
+    width: 75%;
+}
+
+.menu_right ul
+{
+    list-style-type: none;
+}
+
+.menu_right > ul > li
+{
+    position: relative;
+    height: 100%;
+    top: 27px;
+}
+
+.menu_right > ul > li > a
+{
+    font-size: 0.9em;
+} 
+
+.menu_right li a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+.menu_right li a.current 
+{
+    color: black;
+    font-weight: bold;
+}
+
+.menu_left img
+{
+    position: fixed;
+    float: left;
+    width: 130px;
+    height: 130px;
+    margin-left: 7vw;
+    margin-top: 10px;
+}
+
+.menu_left
+{
+    position: absolute;
+    z-index: 2;
+}
+
+.burger
+{
+    width: 30px;
+    height: 30px;
+    display: none;
+    position: relative;
+    align-items: center;
+    float: right;
+    margin-right: 10vw;
+    margin-top: 25px;
+}
+
+.burger span
+{
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.4s;
+}
+
+.burger span::before
+{
+    content: '';
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    background-color: black;
+    margin-top: -9px;
+    transition: transform 0.4s, margin-top 0.4s;
+}
+
+.burger span::after
+{
+    content: '';
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    background-color: black;
+    margin-top: 9px;
+    transition: transform 0.4s, margin-top 0.4s;
+}
+
+.menu_right a.prog
+{
+    color: #c40233;
+    background-color: white;
+    padding: 4px;
+    font-weight: normal;
+    box-shadow: 0px 5px 20px black;
+    border-radius: 8px;
+}
+
+.menu_right a:hover
+{
+    color: black;
+    transition: 0.3s all;
+}
+
+.menu_right a.prog:hover
+{
+    color: black;
+    background-color: #c40233;
+    transition: 0.6s all;
+}
+
+.menu_right .network
+{
+    display: flex;
+    margin-right: 15px;
+}
+
+.menu_right .network img
+{
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+} 
+
+.menu_right .network .login
+{
+    margin-left: 20px;
+} 
+
+.menu_deroulant > a::after
+{
+    content: "❯"; /**/
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+}
+
+.sous_menu
+{
+    position: absolute;
+    margin-top: 33px;
+    background-color: #c40233;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    max-height: 0;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#programm
+{
+    left: -55px;
+    width: 170px;
+}
+
+#partner
+{
+    left: -45px;
+    width: 150px;
+}
+
+.sous_menu > li
+{
+    margin-left: -40px;
+}
+
+.sous_menu .first
+{
+    margin-top: 25px;
+}
+
+.sous_menu > li > a
+{
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    display: inline-block;
+    text-align: center;
+}
+
+.sous_menu > li > a#long
+{
+    height: 65px;
+}
+
+@keyframes rotationFleche
+{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(90deg);}
+}
+
+.menu_deroulant:hover > a::after
+{
+    animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu
+{
+    0%
+    {
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
+    }
+    30%
+    {
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 3);
+        border-top: 3px solid rgba(0, 0, 0, 0.6);
+    }
+    100%
+    {
+        max-height: 50em;
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 3);
+        border-top: 3px solid rgba(0, 0, 0, 0.6);
+    }
+}
+
+.menu_deroulant:hover > .sous_menu
+{
+    animation: apparitionSousMenu 1s forwards;
+} 
+
+.menu_deroulant:hover > a
+{
+    color: black;
+}
+
+/* Corps du site */
+
+.name_cinema img
+{
+    margin-top: 150px;
+    width: 100%;
+}
+
+section.this_week .title1
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clear: both;
+}
+
+section.this_week .title1 h1
+{
+    font-size: 3vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #c40233;
+    font-weight: normal;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+section.this_week .title1 p
+{
+    font-size: 2.8vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #c40233;
+    font-weight: bold;
+}
+
+section.this_week img
+{
+    width: 80%;
+    border: 0.1px solid black;
+}
+
+.posters
+{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 100px;
+}
+
+.poster1 { grid-area: 1 / 1 / 2 / 2; place-self: center;}
+.poster2 { grid-area: 1 / 2 / 2 / 3; place-self: center;}
+.poster3 { grid-area: 2 / 1 / 3 / 2; place-self: center;}
+.poster4 { grid-area: 2 / 2 / 3 / 3; place-self: center;}
+.poster5 { grid-area: 3 / 1 / 4 / 2; place-self: center;}
+.poster6 { grid-area: 3 / 2 / 4 / 3; place-self: center;}
+
+
+section.events .title2
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.events .title2 h1
+{
+    font-size: 2.8vw;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: #c40233;
+    font-weight: normal;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+section.events .title2 p
+{
+    font-size: 2.8vw;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: #c40233;
+    font-weight: normal;
+}
+
+section.contact .title3
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c40233;
+}
+
+section.contact .title3 h1
+{
+    font-size: 2.8vw;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    color: white;
+    font-weight: normal;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+section.contact .title3 p
+{
+    font-size: 2.8vw;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    color: white;
+    font-weight: normal;
+}
+
+header, section.this_week, section.events, section.contact, .name_cinema
+{
+    user-select: none;
+}
+
+.name_cinema, .title1, .title2, .title3, .posters, footer
+{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Pied de page */
+
+.pied_page
+{
+    background-color: #c40233;
+}
+
+footer
+{
+    padding-bottom: 50px;
+    background-color: #c40233;
+}
+
+.contact_link p
+{
+    margin-top: 50px;
+    color: white;
+    font-size: 2vw;
+}
+
+.link
+{
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover
+{
+    color: black;
+    transition: color 0.7s;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width:761px) and (max-width:1520px) 
+{
+
+    .sous_menu, .menu_deroulant > a::after
+    {
+        display: none;
+    }
+
+    .burger
+    {
+        display: block;
+    }
+
+    .burger.active span
+    {
+        background: transparent;
+    }
+
+    .burger.active span::before
+    {
+        transform: rotate(45deg);
+        margin-top: 0;
+    }
+
+    .burger.active span::after
+    {
+        transform: rotate(-45deg);
+        margin-top: 0;
+    }
+
+    .menu_right ul
+    {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        background-color: #c40233;
+        width: 100%;
+        height: 0;
+        top: 90%;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: 0px 10px 20px black;
+        overflow: hidden;
+        transition: height 0.4s;
+    }
+
+    .menu_right ul.active
+    {
+        height: 350%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .menu_right a
+    {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    .menu_right .network img
+    {
+        padding-top: 20px;
+    }
+
+    .menu_left
+    {
+        z-index: 2;
+    }
+}
+
+@media only screen and (min-width:250px) and (max-width:760px)
+{
+    
+    .menu_left img
+    {
+        width: 90px;
+        height: 90px;
+        margin-left: 6vw;
+        margin-top: 28px;
+    }
+
+    section.this_week .title1 h1
+    {
+        font-size: 7vw;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    section.this_week .title1 p
+    {
+        font-size: 2vw;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    section.events .title2 h1
+    {
+        font-size: 5vw;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    section.events .title2 p
+    {
+        font-size: 2vw;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    section.contact .title3 h1
+    {
+        font-size: 5vw;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    section.contact .title3 p
+    {
+        font-size: 2vw;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .burger
+    {
+        display: block;
+    }
+
+    .burger.active span
+    {
+        background: transparent;
+    }
+
+    .burger.active span::before
+    {
+        transform: rotate(45deg);
+        margin-top: 0;
+    }
+
+    .burger.active span::after
+    {
+        transform: rotate(-45deg);
+        margin-top: 0;
+    }
+
+    .menu_right ul
+    {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        background-color: #c40233;
+        width: 100%;
+        height: 0;
+        top: 90%;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: 0px 10px 20px black;
+        overflow: hidden;
+        transition: height 0.4s;
+    }
+
+    .menu_right ul.active
+    {
+        height: 800%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .menu_right a
+    {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    .menu_right .network img
+    {
+        padding-top: 20px;
+    }
+
+    .menu_left
+    {
+        z-index: 2;
+    }
+}
